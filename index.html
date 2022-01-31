@@ -3,43 +3,145 @@
 <head>
 <style>
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid powderblue;
   border-collapse: collapse;
 }
 th, td {
   padding: 20px;
 }
-}
 table.center {
   margin-left: auto;
   margin-right: auto;
+}
+Body  
+{  
+color:black;  
+}  
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 25px;
+  font-weight: bold;
+}
 
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
 </style>
 </head>
 <body>
-		
-<h1 style="text-align:center;">Recently Added</h1>
+    
+<h1 align="center">Initial Realease of "TV and Movie Tracker v0.8"</h1>
 
-<h2 style="text-align:center;" style="color:#00ccff">January 29, 2022</h2>
-<a href="https://obs-tv-mov-tracker.us-east-1.linodeobjects.com/z-Posters/tv0009poster.jpg"><img src="https://obs-tv-mov-tracker.us-east-1.linodeobjects.com/z-Posters/tv0009poster.jpg" alt="Aaahh!!! Real Monsters" width="380px" height="500px" align="center"></a>
+<p align="center">
+  (Once a better name is thought of it will change to v1.0)
+</p>
+/* Add screenshots here */
+<button type="button" class="collapsible" align="center">Screenshots (click to view)</button>
+<div class="content">
+<p align="center">;lkasd;fkkjsdf;sdk;lfj;jsdfk;lsjlkadf</p>
+</div>
+<br>
+<br>
+<br>
 
- <table align="center">
+<button type="button" class="collapsible" align="center">What's it built on?</button>
+<div class="content">
+<p align="center">
+    This tracker is not a stand along program. It is a collection<br>
+    of plug-ins and scripts for the note-taking program <a href="https://www.Obsidian.md">Obsidian.md</a>.<br>
+</p>
+
+<table align="center">
   <tr>
-    <th>Update</th>
-    <th>Includes</th>
-    <th>Date</th>
+    <th>Plug-in</th>
+    <th>Plug-in Author</th>
+    <th>Plug-in Functionality</th>
   </tr>
   <tr>
-    <td>Update 1</td>
-   <td>
-   		<ul>
-  			<li>Main Show Page</li>
-  			<li>Episode Page</li>
-  			<li>Episode Images</li>
-		</ul>
-   </td>
+    <td>Minimal Theme</td>
+    <td>kepano</td>
+    <td>This is the theme that the tracker uses. Currently this is the only theme that will work with the poster view that is used in the tracker. I am working on getting the poster view working for other themes.</td>
+  <tr>
+  <tr>
+    <td>Admonition</td>
+    <td>Jeremy Valentine</td>
+    <td>Admonition allows for collapsible, color-coded, block-styled content.</td>
   </tr>
-</table> 
+  <tr>
+    <td>Banners</td>
+    <td>Danny Hernandez</td>
+    <td>Banners adds a banner image to the top of note pages.</td>
+  </tr>
+  <tr>
+    <td>Collapse All</td>
+    <td>OfficerHalf</td>
+    <td>Adds a button to collapse or expand all folders while in the file explorer.</td>
+  </tr>
+  <tr>
+    <td>Contextual Typography</td>
+    <td>mgmeyers</td>
+    <td>THIS IS REQUIRED FOR SOME FEATURES OF "MINIMAL THEME". Adds a data-tag-name attribute to all top-level divs in preview mode containing the child's tag name, allowing contextual typography styling.</td>
+  </tr>
+  <tr>
+    <td>Dataview</td>
+    <td>Michael Brenan aka. blacksmithgu</td>
+    <td>Dataview allows for complex queries using YAML metadata at the top of each note. This is used for the overall show views along with the lists for actors, genres, etc...</td>
+  </tr>
+  <tr>
+    <td>Hider</td>
+    <td>kepano</td>
+    <td>Hide UI elements such as tooltips, status, titlebar and more.</td>
+  </tr>
+  <tr>
+    <td>Homepage</td>
+    <td>novov</td>
+    <td>Open a specified note on startup. This is configured to show the trackers "Welcome" page on startup. You can also click the House icon in the left bar.</td>
+  </tr>
+  <tr>
+    <td>Minimal Theme Settings</td>
+    <td>kepano</td>
+    <td>Change the colors, fonts, and features of Minimal Theme.</td>
+  </tr>
+  <tr>
+    <td>Sortable</td>
+    <td>Alexandru Dinu</td>
+    <td>Wiki-like table sorting.</td>
+  </tr>
+</table>
+
+
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
